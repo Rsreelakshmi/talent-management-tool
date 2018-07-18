@@ -1,0 +1,41 @@
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+
+// 2. Set your own initial variables
+// Check the documentation @ https://bulma.io/documentation/overview/customize/
+
+// 3. Set the derived variables
+// Check the documentation @ https://bulma.io/documentation/overview/customize/
+
+// 4. Setup your Custom Colors
+// Check the documentation @ https://bulma.io/documentation/overview/customize/
+
+// 5. Add new color variables to the color map.
+@import "../node_modules/bulma/sass/utilities/derived-variables";
+// Check the documentation @ https://bulma.io/documentation/overview/customize/
+
+// 6. Import the rest of Bulma
+@import "../node_modules/bulma/sass/utilities/_all";
+@import "../node_modules/bulma/sass/base/helpers";
+@import "../node_modules/bulma/sass/layout/_all";
+@import "../node_modules/bulma/sass/grid/columns";
+@import "../node_modules/bulma/sass/elements/container";
+@import "../node_modules/bulma/sass/elements/tag";
+@import "../node_modules/bulma/sass/components/media";
+@import "../node_modules/bulma/sass/components/level";
+@import "../node_modules/bulma/sass/elements/image";
+@import "../node_modules/bulma-timeline/dist/css/bulma-timeline";
+
+html,
+body {
+  min-height: 100%;
+}
+
+@import "./utils/typography.scss";
+@import "./utils/timeline.scss";
+
+#root {
+  background-color: #0083c2;
+  font-family: 'Noto Serif', serif;
+}

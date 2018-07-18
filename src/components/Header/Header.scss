@@ -1,0 +1,27 @@
+@import "../../utils/typography.scss";
+.sm-header {
+  display: block;
+  .title {
+    color: #fff;
+  }
+  &-search-field {
+    float: right;
+  }
+  &-search-input {
+    label,
+    [class*="MuiInput-FormLabel-focused"] {
+      color: #fff !important;
+      font-family: 'Noto Serif', serif !important;
+    }
+  }
+  [class*="MuiInput-underline-"] {
+    &:before,
+    &:after,
+    &:hover {
+      border-bottom: 1px solid #ebf1f5 !important;
+    }
+  }
+}
+.clearfix {
+  clear: both;
+}

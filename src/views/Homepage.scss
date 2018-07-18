@@ -1,0 +1,48 @@
+
+@import "../utils/typography.scss";
+.sm-container {
+    background-color: #ecf2f6;
+    header {
+        background-color: #0083c2;
+        padding: 20px 15px;
+        .title {
+            float: left;
+            width: 40%;
+        }
+        .search-field {
+            float: right;
+        }
+    }
+    .sm-section {
+        
+    }
+}
+.sm-landing {
+    &-container {
+        background-color: #ecf2f6;
+        header {
+            background-color: #0083c2;
+            padding: 20px 15px;
+            .title {
+                float: left;
+                width: 40%;
+            }
+            .search-field {
+                float: right;
+            }
+        }
+    }
+    &-section {
+        display: block !important;
+    }
+    &-description {
+        float: left;
+        margin: 20px !important;
+        width: 75%;
+    }
+    &-btn {
+        border-radius: 25px !important;
+        float: right;
+        margin: 20px !important;
+    }
+}

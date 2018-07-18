@@ -1,0 +1,27 @@
+@import "../../utils/typography.scss";
+.sm-skill {
+  display: block;
+  margin: 15px 0;
+  &-flair {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-transform: capitalize;
+  }
+  &-circle {
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    top: 2px;
+    left: 0;
+    position: absolute;
+    width: 12px;
+    background-color: coral;
+  }
+  &-label {
+    margin-left: 20px;
+    position: relative;
+    color: #000;
+    @include f-55-r(14px, 14px * 1.27);
+  }
+}

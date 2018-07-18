@@ -1,0 +1,88 @@
+@import "../../utils/typography.scss";
+.skill-list {
+  &-section {
+    background-color: #000000;
+  }
+  &-table {
+    text-align: center;
+  }
+  &-text{
+    color: #ffffff;
+  }
+  &-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+.sm-tile {
+  &-root {
+    background-color: #ffffff;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-right: 1.5em;
+    &.break{
+      background-color: transparent;
+    }
+  }
+  &-header {
+  }
+  &-title {
+    @include f-65(16px, 16px * 1.27);
+    // @media screen and (min-width: 769px) {
+    //   @include f-65(23.5px, 23.5px * 1.27);
+    // }
+  }
+  &-header-actions{
+    position: relative;
+  }
+  &-subtitle {
+    display: block;
+    color: #999999;
+    @include f-45(13px, 13px * 1.27);
+    // @media screen and (min-width: 769px) {
+    //   @include f-45(18px, 18px * 1.27);
+    // }
+  }
+  &-isfav{
+    position: absolute;
+    top: 94%;
+    left: 12px;
+  }
+  &-tags {
+    display: block;
+    margin-top: rem(5px);
+  }
+  &-like-btn {
+    &-icon {
+      margin-right: rem(5px);
+    }
+  }
+  &-speaker {
+    &-name {
+      display: block;
+      @include f-65(16px, 16px * 1.27);
+    }
+    &-designation {
+      display: block;
+      @include f-55-r(14px, 14px * 1.27);
+    }
+  }
+  &-collapsed-content {
+    padding-top: 0;
+  }
+  &-collapsed-footer {
+    justify-content: flex-end;
+  }
+  &-session-excerpt{
+    @include f-55-r(14px, 14px * 1.27);
+  }
+  &-expand {
+    transform: rotate(0deg);
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    margin-left: auto;
+  }
+  &-expand-open {
+    transform: rotate(180deg);
+  }
+}

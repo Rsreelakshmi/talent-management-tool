@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "UniversLTPro-45Light";
+  src: url("2FED46_8_0.eot");
+  src: url("2FED46_8_0.eot?#iefix") format("embedded-opentype"),
+    url("2FED46_8_0.woff2") format("woff2"),
+    url("2FED46_8_0.woff") format("woff"),
+    url("2FED46_8_0.ttf") format("truetype"),
+    url("2FED46_8_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniversLTPro-55Oblique";
+  src: url("2FED46_2_0.eot");
+  src: url("2FED46_2_0.eot?#iefix") format("embedded-opentype"),
+    url("2FED46_2_0.woff2") format("woff2"),
+    url("2FED46_2_0.woff") format("woff"),
+    url("2FED46_2_0.ttf") format("truetype"),
+    url("2FED46_2_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniversLTPro-65Bold";
+  src: url("2FED46_3_0.eot");
+  src: url("2FED46_3_0.eot?#iefix") format("embedded-opentype"),
+    url("2FED46_3_0.woff2") format("woff2"),
+    url("2FED46_3_0.woff") format("woff"),
+    url("2fed46_3_0.ttf") format("truetype"),
+    url("2FED46_3_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniversLTPro-55Roman";
+  src: url("2FED46_0_0.eot");
+  src: url("2FED46_0_0.eot?#iefix") format("embedded-opentype"),
+    url("2FED46_0_0.woff2") format("woff2"),
+    url("2FED46_0_0.woff") format("woff"),
+    url("2FED46_0_0.ttf") format("truetype"),
+    url("2FED46_0_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
