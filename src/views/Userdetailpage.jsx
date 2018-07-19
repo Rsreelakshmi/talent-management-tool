@@ -5,7 +5,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import UserTile from "../components/UserTile/UserTile";
 import SkillList from "../components/SkillList/SkillList";
-import "./Homepage.css";
+import "./Userdetailpage.css";
 import Header from "../components/Header/Header";
 
 const styles = theme => ({
@@ -23,7 +23,7 @@ const styles = theme => ({
       },
 });
 
-class Homepage extends Component {
+class Userdetailpage extends Component {
     render() {
         const { classes } = this.props;
         return (
@@ -46,8 +46,8 @@ class Homepage extends Component {
         );
     }
 }
-Homepage.propTypes = {
+Userdetailpage.propTypes = {
 
 };
 
-export default withStyles(styles)(withRouter(Homepage));
+export default withStyles(styles)(withRouter(Userdetailpage));

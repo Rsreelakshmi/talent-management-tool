@@ -1,8 +1,8 @@
 import React from "react";
 import Loadable from "react-loadable";
 
-export const LoadableHomepage = Loadable({
-  loader: () => import("../views/Homepage"),
+export const LoadableUserdetailpage = Loadable({
+  loader: () => import("../views/Userdetailpage"),
   loading() {
     return <div>Loading...</div>;
   }

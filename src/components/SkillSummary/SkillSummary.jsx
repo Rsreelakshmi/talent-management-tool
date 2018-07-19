@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Redirect, Switch, withRouter } from "react-router-dom";
+import { Route, Redirect, Switch, withRouter, Link } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import Paper from "@material-ui/core/Paper";
@@ -58,9 +58,7 @@ class SkillSummary extends Component {
               return (
                 <TableRow key={n.id}>
                   <TableCell component="th" scope="row" className="skill-list-text">
-                    <a href="/home">
-                      {n.name}
-                    </a>
+                    <Link to={`/users/${n.id}`}>{n.name}</Link>
                   </TableCell>
                   <TableCell className="skill-list-text">{n.designation}</TableCell>
                   <TableCell className="skill-list-text">{n.project}</TableCell>

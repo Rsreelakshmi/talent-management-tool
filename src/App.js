@@ -5,7 +5,7 @@ import {
   Redirect,
   Switch
 } from "react-router-dom";
-import { LoadableHomepage, LoadableSummarypage,LoadableCreateTalentPage, LoadableLandingPage } from "./loadable";
+import { LoadableUserdetailpage, LoadableSummarypage,LoadableCreateTalentPage, LoadableLandingPage } from "./loadable";
 import store from "./store";
 import { Provider } from "react-redux";
 import AddSkillModal from './components/AddSkillModal/AddSkillModal';
@@ -17,21 +17,21 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <Switch>
-              <Route path="/home" component={LoadableHomepage} />
-              <Redirect exact={true} from="/" to="/home" />
-            </Switch>
             <Route exact={true} path="/landingpage/summary" component={LoadableSummarypage} />
+            <Switch>
             <Route exact={true} path="/landingpage" render={() => (
                 <div className="App">
                   <LoadableLandingPage />
                 </div>
               )}/>
+              <Redirect exact={true} from="/" to="/landingpage" />
+            </Switch>
             <Route exact={true} path="/landingpage/add-skill" render={() => (
               <div className="App">
                 <AddSkillModal />
               </div>
             )}/>
+            <Route path="/users/:userId" component={LoadableUserdetailpage} />
             <Route exact={true} path="/landingpage/add-talent" render={() => (
                 <div className="App">
                   <LoadableCreateTalentPage />
