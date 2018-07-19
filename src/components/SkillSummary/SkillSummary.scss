@@ -10,6 +10,11 @@
   &-text{
     color: #6f7d96 !important;
     font-family: 'Noto Serif', serif !important;
+    a {
+      color: #6f7d96 !important;
+      font-family: 'Noto Serif', serif !important;
+      text-decoration: none;
+    }
   }
   &-title {
     background-color: #6f7d96;

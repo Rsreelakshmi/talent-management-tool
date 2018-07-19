@@ -60,7 +60,9 @@ class CreateTalentModal extends Component {
     multiline: '',
     skillGroup: '',
     bio: '',
-    designation: ''
+    designation: '',
+    firstname: '',
+    lastname: ''
   };
   onClose = () => {
     this.setState({
@@ -107,6 +109,24 @@ class CreateTalentModal extends Component {
               className="textfield"
               value={this.state.designation}
               onChange={this.handleChange('designation')}
+              margin="normal"
+            />
+            <TextField
+              id="firstname"
+              multiline
+              label="First Name"
+              className="textfield"
+              value={this.state.firstname}
+              onChange={this.handleChange('firstname')}
+              margin="normal"
+            />
+            <TextField
+              id="lastname"
+              multiline
+              label="Last Name"
+              className="textfield"
+              value={this.state.lastname}
+              onChange={this.handleChange('lastname')}
               margin="normal"
             />
           <TextField

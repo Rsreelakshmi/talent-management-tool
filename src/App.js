@@ -21,7 +21,7 @@ class App extends Component {
               <Route path="/home" component={LoadableHomepage} />
               <Redirect exact={true} from="/" to="/home" />
             </Switch>
-            <Route path="/landingpage/summary" component={LoadableSummarypage} />
+            <Route exact={true} path="/landingpage/summary" component={LoadableSummarypage} />
             <Route exact={true} path="/landingpage" render={() => (
                 <div className="App">
                   <LoadableLandingPage />

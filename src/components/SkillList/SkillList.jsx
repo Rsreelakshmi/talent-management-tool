@@ -27,22 +27,6 @@ const styles = theme => ({
   },
 });
 
-
-let id = 0;
-function createData(name, type, level, experience) {
-  id += 1;
-  return { id, name, type, level, experience };
-}
-
-const data = [
-  createData('Java', 'Backend', 'expert', 3),
-  createData('JavaScript', 'frontend', 'expert', 6),
-  createData('DevOps', 'Build', 'beginner', 1),
-  createData('Python', 'Backend', 'intermediate', 2),
-  createData('Python', 'Backend', 'expert', 5),
-  createData('HTML5', 'Frontend', 'expert', 4),
-];
-
 class SkillList extends Component {
   state = {
     expanded: false,
@@ -198,11 +182,11 @@ class SkillList extends Component {
 }
 
 SkillList.propTypes = {
-  
+  userData: PropTypes.object.isRequired,
 };
 
 SkillList.defaultProps = {
-  session: { meta: {}, speakers: [], topics: [] },
+  userData: { },
   favorites: [],
   baseRoute: "/home/"
 };

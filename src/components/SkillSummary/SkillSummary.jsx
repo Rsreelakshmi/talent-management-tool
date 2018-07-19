@@ -26,20 +26,19 @@ const styles = theme => ({
 
 
 let id = 0;
-function createData(name, type, level, experience) {
+function createData(name, designation, project, experience) {
   id += 1;
-  return { id, name, type, level, experience };
+  return { id, name, designation, project, experience };
 }
 
 const data = [
-  createData('Java', 'Backend', 'expert', 3),
-  createData('JavaScript', 'frontend', 'expert', 6),
-  createData('DevOps', 'Build', 'beginner', 1),
-  createData('Python', 'Backend', 'intermediate', 2),
-  createData('Python', 'Backend', 'expert', 5),
-  createData('HTML5', 'Frontend', 'expert', 4),
+  createData('John', 'Sr. Developer', 'proj 1', 3),
+  createData('Alex', 'Associate', 'proj 2', 1),
+  createData('Charlie', 'Sr. Architect', 'Proj 1', 9),
+  createData('Mary ', 'Sr. Manager', 'proj 1', 12),
+  createData('Henry', 'AL1', 'proj 4', 2),
+  createData('Catie', 'SAL1', 'proj 3', 4),
 ];
-
 class SkillSummary extends Component {
   render() {
     const { classes } = this.props;
@@ -48,9 +47,9 @@ class SkillSummary extends Component {
         <Table className="skill-list-table">
           <TableHead>
             <TableRow>
-              <TableCell className="skill-list-title">Skill Name</TableCell>
-              <TableCell className="skill-list-title">Skill Type</TableCell>
-              <TableCell className="skill-list-title">Level</TableCell>
+              <TableCell className="skill-list-title">Name</TableCell>
+              <TableCell className="skill-list-title">Designation</TableCell>
+              <TableCell className="skill-list-title">Project</TableCell>
               <TableCell className="skill-list-title" numeric>Experience (in yrs)</TableCell>
             </TableRow>
           </TableHead>
@@ -59,10 +58,12 @@ class SkillSummary extends Component {
               return (
                 <TableRow key={n.id}>
                   <TableCell component="th" scope="row" className="skill-list-text">
-                    {n.name}
+                    <a href="/home">
+                      {n.name}
+                    </a>
                   </TableCell>
-                  <TableCell className="skill-list-text">{n.type}</TableCell>
-                  <TableCell className="skill-list-text">{n.level}</TableCell>
+                  <TableCell className="skill-list-text">{n.designation}</TableCell>
+                  <TableCell className="skill-list-text">{n.project}</TableCell>
                   <TableCell className="skill-list-text" numeric>{n.experience}</TableCell>
                 </TableRow>
               );
