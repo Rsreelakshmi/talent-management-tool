@@ -1,11 +1,14 @@
 @import "../../utils/typography.scss";
-.skill-list {
+.user-skill-list {
   &-section {
     background-color: #ecf2f6;
     margin: 30px 15px;
+    width: 625px;
   }
   &-table {
+    // margin: 15px;
     text-align: center;
+    width: 600px;
   }
   &-text{
     color: #6f7d96 !important;

@@ -1,6 +1,6 @@
 import { UPDATE_TAB } from "../actions";
 
-function tab(state = { value: "agenda" }, action) {
+function tab(state = { value: "summary" }, action) {
   switch (action.type) {
     case UPDATE_TAB:
       return Object.assign({}, state, {

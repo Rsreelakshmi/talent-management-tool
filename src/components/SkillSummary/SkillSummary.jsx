@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-import { Route, Redirect, Switch, withRouter, Link } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import Paper from "@material-ui/core/Paper";
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import IconButton from "@material-ui/core/IconButton";
-import Icon from "@material-ui/core/Icon";
-import Button from "@material-ui/core/Button";
 import "./SkillSummary.css";
 
 const styles = theme => ({
@@ -41,7 +38,6 @@ const data = [
 ];
 class SkillSummary extends Component {
   render() {
-    const { classes } = this.props;
     return (
       <Paper className="skill-list-section">
         <Table className="skill-list-table">
@@ -58,7 +54,7 @@ class SkillSummary extends Component {
               return (
                 <TableRow key={n.id}>
                   <TableCell component="th" scope="row" className="skill-list-text">
-                    <Link to={`/users/${n.id}`}>{n.name}</Link>
+                    <Link to={`/landingpage/profile`}>{n.name}</Link>
                   </TableCell>
                   <TableCell className="skill-list-text">{n.designation}</TableCell>
                   <TableCell className="skill-list-text">{n.project}</TableCell>

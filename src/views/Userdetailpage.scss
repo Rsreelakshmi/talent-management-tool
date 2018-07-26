@@ -13,9 +13,6 @@
             float: right;
         }
     }
-    .sm-section {
-        
-    }
 }
 .sm-landing {
     &-container {
@@ -32,17 +29,24 @@
             }
         }
     }
+    &-chart {
+        display: inline-block;
+    }
+    &-desc {
+        display: inline-block;
+    }
+    &-btn-desc,
+    &-btn-section {
+        display: inline-flex;
+    }
     &-section {
-        display: block !important;
+        display: flex !important;
     }
     &-description {
-        float: left;
         margin: 20px !important;
-        width: 75%;
     }
     &-btn {
         border-radius: 25px !important;
-        float: right;
         margin: 20px !important;
     }
 }

@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import "./Header.css";
 
 const styles = theme => ({
@@ -24,7 +22,6 @@ const styles = theme => ({
 
 class Header extends Component {
   render() {
-    const { classes } = this.props;
     return (
       <header className="sm-header">
         <h1 className="title">Talent Building Tool</h1>

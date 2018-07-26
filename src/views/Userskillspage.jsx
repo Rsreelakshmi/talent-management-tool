@@ -10,7 +10,6 @@ import Header from "../components/Header/Header";
 import Tabs from "../components/Tabs/Tabs";
 import { connect } from "react-redux";
 import { actionUpdateTab } from "../store/actions";
-import UserDetails from "../components/UserDetails/UserDetails";
 
 const styles = theme => ({
     container: {
@@ -27,14 +26,14 @@ const styles = theme => ({
       },
 });
 
-class Userdetailpage extends Component {
+class Userskillspage extends Component {
     handleChange = (event, value) => {
         const { history } = this.props;
         history.push(`/landingpage/${value}`);
     };
     componentWillMount() {
         const { updateTab } = this.props;
-        updateTab("profile");
+        updateTab("skills");
     }
     render() {
         const { tab } = this.props;
@@ -45,10 +44,7 @@ class Userdetailpage extends Component {
                     <Tabs tab={tab} tabClickHandler={this.handleChange} />
                 </Paper>
                 <Grid container className="sm-section">
-                    <Grid item xs={12} sm={6}>
-                        <UserDetails/>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={8}>
                         <SkillList/> 
                     </Grid>
                 </Grid>  
@@ -69,11 +65,11 @@ const mapDispatchToProps = dispatch => ({
       dispatch(actionUpdateTab(data));
     }
 });
-Userdetailpage.propTypes = {
+Userskillspage.propTypes = {
 
 };
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-  )(withStyles(styles)(withRouter(Userdetailpage)));
+  )(withStyles(styles)(withRouter(Userskillspage)));

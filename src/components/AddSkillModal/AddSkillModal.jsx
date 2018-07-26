@@ -2,13 +2,10 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
-import Paper from "@material-ui/core/Paper";
 import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Icon from "@material-ui/core/Icon";
 import Dialog from "@material-ui/core/Dialog";
-import Avatar from '@material-ui/core/Avatar';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Slide from "@material-ui/core/Slide";
@@ -158,7 +155,7 @@ AddSkillModal.propTypes = {
 };
 
 AddSkillModal.defaultProps = {
-  baseRoute: '/home/'
+  baseRoute: '/users/:userId'
 };
 
 export default withStyles(styles)(AddSkillModal);

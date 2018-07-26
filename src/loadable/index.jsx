@@ -8,6 +8,13 @@ export const LoadableUserdetailpage = Loadable({
   }
 });
 
+export const LoadableUserSkillspage = Loadable({
+  loader: () => import("../views/Userskillspage"),
+  loading() {
+    return <div>Loading...</div>;
+  }
+});
+
 export const LoadableSummarypage = Loadable({
   loader: () => import("../views/Summarypage"),
   loading() {

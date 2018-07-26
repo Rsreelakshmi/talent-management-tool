@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Route, Redirect, Switch, withRouter, Link } from "react-router-dom";
+import { Route, withRouter, Link } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
@@ -38,21 +38,19 @@ class SkillList extends Component {
     });
   };
   createSubRoute = () => {
-    const { baseRoute } = this.props;
     <Route exact={true} path='/landingpage/add-skill' render={() => (
       <div className="App">
-        <AddSkillModal baseRoute={baseRoute}/>
+        <AddSkillModal baseRoute={this.props.location.pathname}/>
       </div>
     )}/>
   };
   render() {
-    const { classes, baseRoute } = this.props;
     return (
       <Grid container className="sm-section">
       {this.createSubRoute()}
         <Grid item xs={12} sm={6}>
             <Card
-            className={`sm-tile-root`}
+            className={`sm-tile-root`} key='5432'
           >
             <CardHeader
               className="sm-tile-header"
@@ -115,7 +113,7 @@ class SkillList extends Component {
         </Grid>
         <Grid item xs={12} sm={6}>
             <Card
-            className={`sm-tile-root`}
+            className={`sm-tile-root`} key='1423'
           >
             <CardHeader
               className="sm-tile-header"
