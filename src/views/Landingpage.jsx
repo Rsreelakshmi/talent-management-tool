@@ -9,6 +9,7 @@ import Header from "../components/Header/Header";
 import { connect } from "react-redux";
 import { actionUpdateTab } from "../store/actions";
 import Skillchart from "../components/Skillchart/Skillchart";
+import Linechart from "../components/Linechart/Linechart";
 
 class Landingpage extends Component {
     handleChange = (event, value) => {
@@ -28,10 +29,13 @@ class Landingpage extends Component {
                     <Tabs tab={tab} tabClickHandler={this.handleChange} />
                 </Paper>
                 <Grid container className="sm-landing-section">
-                    <Grid item xs={12} sm={6} className="sm-landing-chart">
-                        <Skillchart/>
+                    <Grid item xs={12} sm={12} className="sm-landing-chart">
+                        {/* <Skillchart/> */}
+                        <Linechart/>
                     </Grid>
-                    <Grid item xs={12} sm={6} className="sm-landing-desc">
+                </Grid>  
+                <Grid container >
+                    <Grid item xs={12} sm={12} className="sm-landing-desc">
                         <Grid item xs={12} sm={8} className="sm-landing-btn-desc">
                             <div className="sm-landing-description">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu est leo. Maecenas vulputate, mi et 
@@ -52,7 +56,7 @@ class Landingpage extends Component {
                         </Grid>
                         <div className="clearfix"></div>
                     </Grid>
-                </Grid>  
+                </Grid>
                 {/* <Grid container className="sm-section">
                     
                 </Grid>   */}

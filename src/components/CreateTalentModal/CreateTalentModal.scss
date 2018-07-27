@@ -29,6 +29,9 @@
     color: #0083c2;
     margin: 15px 15px 0;
   }
+  &-sg-section {
+    display: inline;
+  }
   &-form-section {
     margin: 10px;
     h1 {
@@ -79,5 +82,22 @@
   }
   &-form-btn {
     display: inline;
+  }
+  &-skill-set-section {
+    border: 1px solid #6f7d96;
+    border-radius: 5px;
+    margin: 15px 15px 0;
+  }
+}
+.sg-section {
+  &-textfield,
+  &-drpdown {
+    margin: 10px 15px !important;
+    width: 23% !important;
+  }
+  &-skill-field,
+  &-skill-date {
+    margin: 10px 15px !important;
+    width: 20% !important;
   }
 }

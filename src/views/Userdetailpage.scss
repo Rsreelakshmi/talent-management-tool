@@ -14,6 +14,16 @@
         }
     }
 }
+.sm-summary {
+    &-chart,
+    &-desc {
+        display: inline;
+    }
+    &-card {
+        margin: 15px;
+        // background-color: #ecf2f6 !important;
+    }
+}
 .sm-landing {
     &-container {
         background-color: #ecf2f6;

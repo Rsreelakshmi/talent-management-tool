@@ -3,13 +3,16 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import "./Userdetailpage.css";
+import Card from "@material-ui/core/Card";
+import CardHeader from "@material-ui/core/CardHeader";
+import CardContent from "@material-ui/core/CardContent";
 import SkillSummary from "../components/SkillSummary/SkillSummary";
 import Header from "../components/Header/Header";
-// import Linechart from "../components/Linechart/Linechart";
+import Skillchart from "../components/Skillchart/Skillchart";
 import { connect } from "react-redux";
 import Tabs from "../components/Tabs/Tabs";
 import { actionUpdateTab } from "../store/actions";
+import "./Userdetailpage.css";
 
 class Summarypage extends Component {
     handleChange = (event, value) => {
@@ -28,10 +31,22 @@ class Summarypage extends Component {
                 <Paper elevation={1}>
                     <Tabs tab={tab} tabClickHandler={this.handleChange} />
                 </Paper>
-                {/* <Linechart/> */}
                 <Grid container className="sm-section">
-                    <Grid item xs={12} sm={12}>
-                        <SkillSummary/> 
+                    <Grid item xs={12} sm={6} className="sm-summary-chart">
+                        <Skillchart/>
+                    </Grid>
+                    <Grid item xs={12} sm={6} className="sm-summary-desc">
+                        <Card className="sm-summary-card">
+                            <CardContent>
+                                <div className="">
+                                    <p>John is well experienced in Python and he has done POCs using the same.</p>
+                                    <p>Lorem EpsumLorem EpsumLorem EpsumLorem EpsumLorem EpsumLorem EpsumLorem EpsumLorem EpsumLorem Epsum</p>
+                                    <p>Lorem EpsumLorem EpsumLorem EpsumLorem EpsumLorem EpsumLorem EpsumLorem EpsumLorem EpsumLorem Epsum</p>
+                                    <p>Please find the POC links below:</p>
+                                    <a href="#">https://jsbin.com/nocecif/3/</a>
+                                </div>
+                            </CardContent>
+                        </Card>
                     </Grid>
                 </Grid>  
             </div>
